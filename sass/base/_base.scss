@@ -1,0 +1,19 @@
+/* === Basic Reset === */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // overall setting for site
+  // This defines what 1rem is
+  font-size: 62.5%;  /* = 10px as 0.625 * 16 = 10 */
+}
+
+body {
+  box-sizing: border-box;
+}
+/* === */
