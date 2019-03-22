@@ -1,6 +1,4 @@
 .row {
-
-  background-color: #eee;
   max-width: $grid-width;
   margin: 0 auto; // centre block elements that are inside another block element
 
@@ -49,6 +47,7 @@
 // should now affect anything on the home page for natours
 .grid-test {
   .row {
+    text-align: center;
     [class^="col-"] {
       background-color: #662a6c;
       color: #fff;
