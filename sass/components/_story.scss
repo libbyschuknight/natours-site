@@ -10,6 +10,8 @@
   // angle the story rectangle (think it looks better without it)
   transform: skewX(-12deg);
 
+
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -19,13 +21,43 @@
     --webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%); // makes the shape
     transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden; // this gets rid of a extra line to the right of the image
   }
 
   &__img {
     height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s;
+     // he added but I don't think I need to
   }
 
   &__text {
     transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
   }
 }
